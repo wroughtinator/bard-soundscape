@@ -21,7 +21,8 @@ body.idle { cursor: none; }
 }
 .vignette { position: fixed; inset: 0; pointer-events: none;
   background: radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(4, 6, 16, .55) 75%, rgba(4, 6, 16, .92) 100%); }
-#sky { position: fixed; inset: 0; width: 100%; height: 100%; }
+#fluid, #sky { position: fixed; inset: 0; width: 100%; height: 100%; }
+#fluid { mix-blend-mode: screen; }
 
 /* intro: a single meep orb; its ring fills while the sounds load */
 .intro { position: fixed; inset: 0; display: grid; place-items: center; z-index: 5;

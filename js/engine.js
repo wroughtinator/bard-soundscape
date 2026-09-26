@@ -102,7 +102,7 @@ export class Engine {
     const mix = c.createGain(); mix.gain.value = db2(9);
     const hp = c.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 35; hp.Q.value = 0.6;
     const comp = c.createDynamicsCompressor();
-    comp.threshold.value = -22; comp.knee.value = 12; comp.ratio.value = 2.5; comp.attack.value = 0.08; comp.release.value = 1.2;
+    comp.threshold.value = -22; comp.knee.value = 12; comp.ratio.value = 2.5; comp.attack.value = 0.08; comp.release.value = 1.0;
     const lim = c.createDynamicsCompressor();
     lim.threshold.value = -4; lim.knee.value = 2; lim.ratio.value = 20; lim.attack.value = 0.003; lim.release.value = 0.3;
     this.volume = c.createGain(); this.volume.gain.value = 0.8;

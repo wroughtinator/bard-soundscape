@@ -3,7 +3,7 @@ import { Visuals } from "./visuals.js";
 
 const $ = (id) => document.getElementById(id);
 const manifest = await (await fetch("manifest.json")).json();
-const vis = new Visuals($("sky"));
+const vis = new Visuals($("sky"), $("fluid"));
 
 const artLayers = [$("artA"), $("artB")]; let artIdx = 0, artKey = null;
 function showArt(key) {
@@ -31,7 +31,7 @@ async function start() {
   engine = new Engine(manifest, engineOpts);
   try { await engine.start(); }
   catch (err) { console.error(err); begin.disabled = false; engine = null; return; }
-  window.bard = engine;
+  window.bard = engine; window.bardVis = vis;
   vis.attach(engine.analyser);
   engine.setVolume(+$("volume").value);
   $("intro").classList.add("gone");
