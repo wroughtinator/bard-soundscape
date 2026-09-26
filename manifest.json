@@ -1,0 +1,1210 @@
+{
+ "clips": [
+  {
+   "name": "Astronaut_DanceFX",
+   "file": "audio/Astronaut_DanceFX.mp3",
+   "cat": "emote",
+   "skin": "Astronaut",
+   "dur": 4.962,
+   "norm": -2.13,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_DeathFX",
+   "file": "audio/Astronaut_DeathFX.mp3",
+   "cat": "emote",
+   "skin": "Astronaut",
+   "dur": 4.373,
+   "norm": 9.26,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_JokeFX",
+   "file": "audio/Astronaut_JokeFX.mp3",
+   "cat": "emote",
+   "skin": "Astronaut",
+   "dur": 9.887,
+   "norm": -3.47,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_LaughFX",
+   "file": "audio/Astronaut_LaughFX.mp3",
+   "cat": "emote",
+   "skin": "Astronaut",
+   "dur": 4.721,
+   "norm": 1.93,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_Chime_1",
+   "file": "audio/Astronaut_Passive_Chime_1.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.368,
+   "norm": 5.72,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_2",
+   "file": "audio/Astronaut_Passive_Chime_2.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.536,
+   "norm": -2.66,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_3",
+   "file": "audio/Astronaut_Passive_Chime_3.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.536,
+   "norm": -3.32,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_4",
+   "file": "audio/Astronaut_Passive_Chime_4.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.571,
+   "norm": -3.79,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_5",
+   "file": "audio/Astronaut_Passive_Chime_5.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.571,
+   "norm": -3.79,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_5_0",
+   "file": "audio/Astronaut_Passive_Chime_5_0.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.52,
+   "norm": -5.03,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_5_1",
+   "file": "audio/Astronaut_Passive_Chime_5_1.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.246,
+   "norm": -1.89,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_Chime_5_2",
+   "file": "audio/Astronaut_Passive_Chime_5_2.mp3",
+   "cat": "chime",
+   "skin": "Astronaut",
+   "dur": 11.182,
+   "norm": -0.07,
+   "loop": true
+  },
+  {
+   "name": "Astronaut_Passive_Chime_UpgradeCeremony",
+   "file": "audio/Astronaut_Passive_Chime_UpgradeCeremony.mp3",
+   "cat": "ceremony",
+   "skin": "Astronaut",
+   "dur": 6.311,
+   "norm": -3.8,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_MeepSpawn_0",
+   "file": "audio/Astronaut_Passive_MeepSpawn_0.mp3",
+   "cat": "spawn",
+   "skin": "Astronaut",
+   "dur": 1.296,
+   "norm": 15.38,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_MeepSpawn_1",
+   "file": "audio/Astronaut_Passive_MeepSpawn_1.mp3",
+   "cat": "spawn",
+   "skin": "Astronaut",
+   "dur": 1.778,
+   "norm": 7.54,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_MeepSpawn_2",
+   "file": "audio/Astronaut_Passive_MeepSpawn_2.mp3",
+   "cat": "spawn",
+   "skin": "Astronaut",
+   "dur": 1.667,
+   "norm": 5.61,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_Passive_MeepSpawn_3",
+   "file": "audio/Astronaut_Passive_MeepSpawn_3.mp3",
+   "cat": "spawn",
+   "skin": "Astronaut",
+   "dur": 1.371,
+   "norm": 13.36,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_RecallFX",
+   "file": "audio/Astronaut_RecallFX.mp3",
+   "cat": "recall",
+   "skin": "Astronaut",
+   "dur": 10.061,
+   "norm": -6.31,
+   "loop": false
+  },
+  {
+   "name": "Astronaut_TauntFX",
+   "file": "audio/Astronaut_TauntFX.mp3",
+   "cat": "emote",
+   "skin": "Astronaut",
+   "dur": 8.07,
+   "norm": -4.33,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_DanceFX",
+   "file": "audio/CafeCuties_DanceFX.mp3",
+   "cat": "emote",
+   "skin": "CafeCuties",
+   "dur": 5.119,
+   "norm": 1.96,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_DeathFX",
+   "file": "audio/CafeCuties_DeathFX.mp3",
+   "cat": "emote",
+   "skin": "CafeCuties",
+   "dur": 5.896,
+   "norm": 1.54,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_JokeFX",
+   "file": "audio/CafeCuties_JokeFX.mp3",
+   "cat": "emote",
+   "skin": "CafeCuties",
+   "dur": 12.064,
+   "norm": 1.82,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_LaughFX",
+   "file": "audio/CafeCuties_LaughFX.mp3",
+   "cat": "emote",
+   "skin": "CafeCuties",
+   "dur": 5.156,
+   "norm": 2.67,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_1",
+   "file": "audio/CafeCuties_Passive_Chime_1.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 10.091,
+   "norm": -0.63,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_2",
+   "file": "audio/CafeCuties_Passive_Chime_2.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 11.788,
+   "norm": -2.01,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_3",
+   "file": "audio/CafeCuties_Passive_Chime_3.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 11.696,
+   "norm": -5.01,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_4",
+   "file": "audio/CafeCuties_Passive_Chime_4.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 11.58,
+   "norm": -4.68,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_5",
+   "file": "audio/CafeCuties_Passive_Chime_5.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 11.58,
+   "norm": -4.68,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_5_0",
+   "file": "audio/CafeCuties_Passive_Chime_5_0.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 10.578,
+   "norm": -5.59,
+   "loop": true
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_5_1",
+   "file": "audio/CafeCuties_Passive_Chime_5_1.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 9.951,
+   "norm": -3.52,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_5_2",
+   "file": "audio/CafeCuties_Passive_Chime_5_2.mp3",
+   "cat": "chime",
+   "skin": "CafeCuties",
+   "dur": 9.092,
+   "norm": -3.82,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_Chime_UpgradeCeremony",
+   "file": "audio/CafeCuties_Passive_Chime_UpgradeCeremony.mp3",
+   "cat": "ceremony",
+   "skin": "CafeCuties",
+   "dur": 5.0,
+   "norm": 1.05,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_MeepSpawn_0",
+   "file": "audio/CafeCuties_Passive_MeepSpawn_0.mp3",
+   "cat": "spawn",
+   "skin": "CafeCuties",
+   "dur": 1.154,
+   "norm": 4.97,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_MeepSpawn_1",
+   "file": "audio/CafeCuties_Passive_MeepSpawn_1.mp3",
+   "cat": "spawn",
+   "skin": "CafeCuties",
+   "dur": 1.54,
+   "norm": 4.88,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_MeepSpawn_2",
+   "file": "audio/CafeCuties_Passive_MeepSpawn_2.mp3",
+   "cat": "spawn",
+   "skin": "CafeCuties",
+   "dur": 1.726,
+   "norm": 2.95,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_Passive_MeepSpawn_3",
+   "file": "audio/CafeCuties_Passive_MeepSpawn_3.mp3",
+   "cat": "spawn",
+   "skin": "CafeCuties",
+   "dur": 2.387,
+   "norm": 1.59,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_RecallFX",
+   "file": "audio/CafeCuties_RecallFX.mp3",
+   "cat": "recall",
+   "skin": "CafeCuties",
+   "dur": 9.304,
+   "norm": 1.97,
+   "loop": false
+  },
+  {
+   "name": "CafeCuties_TauntFX",
+   "file": "audio/CafeCuties_TauntFX.mp3",
+   "cat": "emote",
+   "skin": "CafeCuties",
+   "dur": 8.738,
+   "norm": 0.29,
+   "loop": false
+  },
+  {
+   "name": "Ban",
+   "file": "audio/Ban.mp3",
+   "cat": "cue",
+   "skin": "Client",
+   "dur": 10.209,
+   "norm": 0.88,
+   "loop": false
+  },
+  {
+   "name": "LoginTheme",
+   "file": "audio/LoginTheme.mp3",
+   "cat": "theme",
+   "skin": "Client",
+   "dur": 168.439,
+   "norm": -1.72,
+   "loop": false
+  },
+  {
+   "name": "Select",
+   "file": "audio/Select.mp3",
+   "cat": "cue",
+   "skin": "Client",
+   "dur": 5.315,
+   "norm": 1.68,
+   "loop": false
+  },
+  {
+   "name": "Select_SFX",
+   "file": "audio/Select_SFX.mp3",
+   "cat": "cue",
+   "skin": "Client",
+   "dur": 3.813,
+   "norm": 0.38,
+   "loop": false
+  },
+  {
+   "name": "Elderwood_RecallFX",
+   "file": "audio/Elderwood_RecallFX.mp3",
+   "cat": "recall",
+   "skin": "Elderwood",
+   "dur": 9.243,
+   "norm": 1.84,
+   "loop": false
+  },
+  {
+   "name": "Original_Dance",
+   "file": "audio/Original_Dance.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 3.963,
+   "norm": -9.39,
+   "loop": false
+  },
+  {
+   "name": "Original_DanceFX",
+   "file": "audio/Original_DanceFX.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 5.119,
+   "norm": 1.96,
+   "loop": false
+  },
+  {
+   "name": "Original_DanceLoop",
+   "file": "audio/Original_DanceLoop.mp3",
+   "cat": "danceloop",
+   "skin": "Original",
+   "dur": 7.327,
+   "norm": -5.16,
+   "loop": false
+  },
+  {
+   "name": "Original_Death",
+   "file": "audio/Original_Death.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 10.207,
+   "norm": -5.68,
+   "loop": false
+  },
+  {
+   "name": "Original_DeathFX",
+   "file": "audio/Original_DeathFX.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 5.896,
+   "norm": 1.54,
+   "loop": false
+  },
+  {
+   "name": "Original_Joke",
+   "file": "audio/Original_Joke.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 9.603,
+   "norm": -3.51,
+   "loop": false
+  },
+  {
+   "name": "Original_JokeFX",
+   "file": "audio/Original_JokeFX.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 12.064,
+   "norm": 1.82,
+   "loop": false
+  },
+  {
+   "name": "Original_Laugh",
+   "file": "audio/Original_Laugh.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 7.861,
+   "norm": -0.99,
+   "loop": false
+  },
+  {
+   "name": "Original_LaughFX",
+   "file": "audio/Original_LaughFX.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 5.156,
+   "norm": 2.67,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_0",
+   "file": "audio/Original_Move_Meep0_0.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.682,
+   "norm": -4.36,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_1",
+   "file": "audio/Original_Move_Meep0_1.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.772,
+   "norm": -4.1,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_2",
+   "file": "audio/Original_Move_Meep0_2.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 6.236,
+   "norm": -6.1,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_3",
+   "file": "audio/Original_Move_Meep0_3.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 6.352,
+   "norm": -5.44,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_4",
+   "file": "audio/Original_Move_Meep0_4.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 6.19,
+   "norm": -4.31,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_5",
+   "file": "audio/Original_Move_Meep0_5.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.47,
+   "norm": -4.8,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_6",
+   "file": "audio/Original_Move_Meep0_6.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.238,
+   "norm": -5.7,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_7",
+   "file": "audio/Original_Move_Meep0_7.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.168,
+   "norm": -5.25,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep0_8",
+   "file": "audio/Original_Move_Meep0_8.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.029,
+   "norm": -5.95,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_0",
+   "file": "audio/Original_Move_Meep1_0.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.985,
+   "norm": 2.96,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_1",
+   "file": "audio/Original_Move_Meep1_1.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.712,
+   "norm": 2.41,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_2",
+   "file": "audio/Original_Move_Meep1_2.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.561,
+   "norm": 0.18,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_3",
+   "file": "audio/Original_Move_Meep1_3.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.773,
+   "norm": 0.66,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_4",
+   "file": "audio/Original_Move_Meep1_4.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.239,
+   "norm": 2.37,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_5",
+   "file": "audio/Original_Move_Meep1_5.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.121,
+   "norm": -0.18,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_6",
+   "file": "audio/Original_Move_Meep1_6.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.1,
+   "norm": 0.61,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep1_7",
+   "file": "audio/Original_Move_Meep1_7.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.123,
+   "norm": -2.42,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_0",
+   "file": "audio/Original_Move_Meep2_0.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.242,
+   "norm": 2.79,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_1",
+   "file": "audio/Original_Move_Meep2_1.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.657,
+   "norm": 1.45,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_10",
+   "file": "audio/Original_Move_Meep2_10.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.82,
+   "norm": 0.66,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_11",
+   "file": "audio/Original_Move_Meep2_11.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.391,
+   "norm": 2.92,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_12",
+   "file": "audio/Original_Move_Meep2_12.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.165,
+   "norm": 1.47,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_13",
+   "file": "audio/Original_Move_Meep2_13.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 3.868,
+   "norm": 0.31,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_14",
+   "file": "audio/Original_Move_Meep2_14.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.495,
+   "norm": 0.04,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_15",
+   "file": "audio/Original_Move_Meep2_15.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.796,
+   "norm": -0.2,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_2",
+   "file": "audio/Original_Move_Meep2_2.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.521,
+   "norm": -2.43,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_3",
+   "file": "audio/Original_Move_Meep2_3.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.007,
+   "norm": 2.36,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_4",
+   "file": "audio/Original_Move_Meep2_4.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.866,
+   "norm": -2.38,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_5",
+   "file": "audio/Original_Move_Meep2_5.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.82,
+   "norm": -1.98,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_6",
+   "file": "audio/Original_Move_Meep2_6.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.936,
+   "norm": 1.05,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_7",
+   "file": "audio/Original_Move_Meep2_7.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.889,
+   "norm": 0.23,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_8",
+   "file": "audio/Original_Move_Meep2_8.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.214,
+   "norm": 1.14,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep2_9",
+   "file": "audio/Original_Move_Meep2_9.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.332,
+   "norm": -1.95,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_0",
+   "file": "audio/Original_Move_Meep3_0.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 6.747,
+   "norm": -2.46,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_1",
+   "file": "audio/Original_Move_Meep3_1.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.889,
+   "norm": -1.7,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_2",
+   "file": "audio/Original_Move_Meep3_2.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.029,
+   "norm": -2.55,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_3",
+   "file": "audio/Original_Move_Meep3_3.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.68,
+   "norm": -0.61,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_4",
+   "file": "audio/Original_Move_Meep3_4.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 3.914,
+   "norm": -1.25,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_5",
+   "file": "audio/Original_Move_Meep3_5.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 4.959,
+   "norm": 0.08,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_6",
+   "file": "audio/Original_Move_Meep3_6.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 6.221,
+   "norm": 2.33,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_7",
+   "file": "audio/Original_Move_Meep3_7.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.319,
+   "norm": 1.1,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_8",
+   "file": "audio/Original_Move_Meep3_8.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.354,
+   "norm": -2.73,
+   "loop": false
+  },
+  {
+   "name": "Original_Move_Meep3_9",
+   "file": "audio/Original_Move_Meep3_9.mp3",
+   "cat": "meep",
+   "skin": "Original",
+   "dur": 5.267,
+   "norm": -2.06,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_Chime_1",
+   "file": "audio/Original_Passive_Chime_1.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 11.389,
+   "norm": -5.0,
+   "loop": true
+  },
+  {
+   "name": "Original_Passive_Chime_2",
+   "file": "audio/Original_Passive_Chime_2.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 11.546,
+   "norm": -3.42,
+   "loop": true
+  },
+  {
+   "name": "Original_Passive_Chime_3",
+   "file": "audio/Original_Passive_Chime_3.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 11.598,
+   "norm": -8.53,
+   "loop": true
+  },
+  {
+   "name": "Original_Passive_Chime_4",
+   "file": "audio/Original_Passive_Chime_4.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 11.598,
+   "norm": -0.66,
+   "loop": true
+  },
+  {
+   "name": "Original_Passive_Chime_5",
+   "file": "audio/Original_Passive_Chime_5.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 10.598,
+   "norm": -0.24,
+   "loop": true
+  },
+  {
+   "name": "Original_Passive_Chime_5_0",
+   "file": "audio/Original_Passive_Chime_5_0.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 10.292,
+   "norm": -6.8,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_Chime_5_1",
+   "file": "audio/Original_Passive_Chime_5_1.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 11.614,
+   "norm": 1.39,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_Chime_5_2",
+   "file": "audio/Original_Passive_Chime_5_2.mp3",
+   "cat": "chime",
+   "skin": "Original",
+   "dur": 10.527,
+   "norm": -2.36,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_Chime_UpgradeCeremony",
+   "file": "audio/Original_Passive_Chime_UpgradeCeremony.mp3",
+   "cat": "ceremony",
+   "skin": "Original",
+   "dur": 5.67,
+   "norm": -0.98,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_0",
+   "file": "audio/Original_Passive_MeepSpawn_0.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.916,
+   "norm": 4.2,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_1",
+   "file": "audio/Original_Passive_MeepSpawn_1.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.91,
+   "norm": 7.6,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_10",
+   "file": "audio/Original_Passive_MeepSpawn_10.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.788,
+   "norm": 3.37,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_11",
+   "file": "audio/Original_Passive_MeepSpawn_11.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.785,
+   "norm": 6.4,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_12",
+   "file": "audio/Original_Passive_MeepSpawn_12.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.718,
+   "norm": 9.01,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_13",
+   "file": "audio/Original_Passive_MeepSpawn_13.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.75,
+   "norm": 4.89,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_14",
+   "file": "audio/Original_Passive_MeepSpawn_14.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.512,
+   "norm": 6.89,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_2",
+   "file": "audio/Original_Passive_MeepSpawn_2.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.904,
+   "norm": 4.72,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_3",
+   "file": "audio/Original_Passive_MeepSpawn_3.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.898,
+   "norm": 8.54,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_4",
+   "file": "audio/Original_Passive_MeepSpawn_4.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.907,
+   "norm": 7.38,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_5",
+   "file": "audio/Original_Passive_MeepSpawn_5.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.907,
+   "norm": 3.58,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_6",
+   "file": "audio/Original_Passive_MeepSpawn_6.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.904,
+   "norm": 5.96,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_7",
+   "file": "audio/Original_Passive_MeepSpawn_7.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.907,
+   "norm": 4.65,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_8",
+   "file": "audio/Original_Passive_MeepSpawn_8.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.898,
+   "norm": 6.21,
+   "loop": false
+  },
+  {
+   "name": "Original_Passive_MeepSpawn_9",
+   "file": "audio/Original_Passive_MeepSpawn_9.mp3",
+   "cat": "spawn",
+   "skin": "Original",
+   "dur": 2.828,
+   "norm": 6.88,
+   "loop": false
+  },
+  {
+   "name": "Original_R_SFX_0",
+   "file": "audio/Original_R_SFX_0.mp3",
+   "cat": "ult",
+   "skin": "Original",
+   "dur": 3.258,
+   "norm": 0.4,
+   "loop": false
+  },
+  {
+   "name": "Original_Recall",
+   "file": "audio/Original_Recall.mp3",
+   "cat": "recall",
+   "skin": "Original",
+   "dur": 9.742,
+   "norm": -2.11,
+   "loop": false
+  },
+  {
+   "name": "Original_RecallFX",
+   "file": "audio/Original_RecallFX.mp3",
+   "cat": "recall",
+   "skin": "Original",
+   "dur": 8.959,
+   "norm": 2.02,
+   "loop": false
+  },
+  {
+   "name": "Original_Taunt",
+   "file": "audio/Original_Taunt.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 8.744,
+   "norm": -4.73,
+   "loop": false
+  },
+  {
+   "name": "Original_TauntFX",
+   "file": "audio/Original_TauntFX.mp3",
+   "cat": "emote",
+   "skin": "Original",
+   "dur": 8.744,
+   "norm": -4.73,
+   "loop": false
+  },
+  {
+   "name": "Original_W_0",
+   "file": "audio/Original_W_0.mp3",
+   "cat": "shrine",
+   "skin": "Original",
+   "dur": 3.357,
+   "norm": -3.46,
+   "loop": false
+  },
+  {
+   "name": "Original_W_1",
+   "file": "audio/Original_W_1.mp3",
+   "cat": "shrine",
+   "skin": "Original",
+   "dur": 3.659,
+   "norm": -3.42,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_0",
+   "file": "audio/SnowDay_Passive_MeepSpawn_0.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.904,
+   "norm": 4.41,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_1",
+   "file": "audio/SnowDay_Passive_MeepSpawn_1.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.898,
+   "norm": -0.56,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_2",
+   "file": "audio/SnowDay_Passive_MeepSpawn_2.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.898,
+   "norm": 1.24,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_3",
+   "file": "audio/SnowDay_Passive_MeepSpawn_3.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.901,
+   "norm": 0.83,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_4",
+   "file": "audio/SnowDay_Passive_MeepSpawn_4.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.898,
+   "norm": 4.24,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_Passive_MeepSpawn_5",
+   "file": "audio/SnowDay_Passive_MeepSpawn_5.mp3",
+   "cat": "spawn",
+   "skin": "SnowDay",
+   "dur": 2.898,
+   "norm": 4.53,
+   "loop": false
+  },
+  {
+   "name": "SnowDay_RecallFX",
+   "file": "audio/SnowDay_RecallFX.mp3",
+   "cat": "recall",
+   "skin": "SnowDay",
+   "dur": 9.974,
+   "norm": -0.57,
+   "loop": false
+  }
+ ],
+ "art": {
+  "default": "art/default.jpg",
+  "elderwood": "art/elderwood.jpg",
+  "snowday": "art/snowday.jpg",
+  "astronaut": "art/astronaut.jpg",
+  "cafecuties": "art/cafecuties.jpg",
+  "shanhai": "art/shanhai.jpg",
+  "spiritblossom": "art/spiritblossom.jpg"
+ }
+}

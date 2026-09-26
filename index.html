@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bard — Endless Soundscape</title>
+  <meta name="description" content="An endless, never-repeating generative soundscape built from every sound of Bard, the Wandering Caretaker.">
+  <meta name="theme-color" content="#070a18">
+  <meta property="og:title" content="Bard — Endless Soundscape">
+  <meta property="og:description" content="Chimes, meeps and the Caretaker's song, woven live into an ambient soundscape that never repeats.">
+  <meta property="og:image" content="art/default.jpg">
+  <!--
+    Bard — Endless Soundscape isn't endorsed by Riot Games and doesn't reflect the views or opinions of
+    Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games,
+    and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+    Sounds and art © Riot Games. A free, non-commercial fan project.
+  -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='22' fill='%23fff0cd'/><path d='M14 22a22 22 0 0 1 0 20' stroke='%23d6782f' stroke-width='5' fill='none'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="art" id="artA"></div>
+  <div class="art" id="artB"></div>
+  <div class="vignette"></div>
+  <canvas id="sky"></canvas>
+
+  <section id="intro" class="intro">
+    <button id="begin" class="orb" disabled aria-label="Begin the soundscape" style="--p:0">
+      <span class="stripe"></span>
+    </button>
+  </section>
+
+  <footer id="hud-controls" class="hud controls hidden">
+    <button id="pause" aria-label="Pause">
+      <svg viewBox="0 0 24 24" id="ico-pause"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg viewBox="0 0 24 24" id="ico-play" hidden><path d="M7 5l12 7-12 7z"/></svg>
+    </button>
+    <label class="vol">
+      <svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+    </label>
+    <button id="fs" aria-label="Fullscreen">
+      <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
