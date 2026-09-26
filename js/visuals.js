@@ -165,11 +165,11 @@ export class Visuals {
   // organ bed: a slow current on a drifting path, coloured by the scene, swelling with the bass
   bed(dt) {
     this.bedT += dt;
-    if (this.bedT < 0.3) return; this.bedT = 0;
+    if (this.bedT < 0.2) return; this.bedT = 0;
     const t = this.time * 0.07, W = this.W, H = this.H;
     const x = W * (0.5 + 0.38 * Math.sin(t * 1.3)), y = H * (0.55 + 0.3 * Math.sin(t * 0.9 + 1.7));
     const dx = Math.cos(t * 1.3) * 1.3 * 0.38 * W * 0.9, dy = Math.cos(t * 0.9 + 1.7) * 0.9 * 0.3 * H * 0.9;
-    const k = 0.03 + this.low * 0.22, col = this.tint[(this.frameN >> 5) % 3];
+    const k = 0.16 + this.low * 0.3 + this.level * 0.2, col = this.tint[(this.frameN >> 5) % 3];
     this.pour(x, y, dx * 0.6, dy * 0.6, col, k, 1.6);
     this.pour(W - x, H - y, -dx * 0.5, -dy * 0.5, this.tint[(this.frameN >> 6) % 3], k * 0.7, 1.3);
   }
