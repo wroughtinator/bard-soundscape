@@ -64,7 +64,7 @@ export const SCENES = [
   { id: "beyond", name: "Beyond", art: "spiritblossom", skins: { Original: 1, Client: 1 },
     desc: "Everything dissolves into the stars.",
     pads: [["theme", 148, 168, 1], ["snd", "Original_Passive_Chime_UpgradeCeremony", .5]],
-    rates: { chime: .9, spawn: .6, cloud: .4, ceremony: .1, meep: .2 },
+    rates: { chime: .9, spawn: .6, cloud: .4, ceremony: .1, meep: .2, cue: .25 },
     pitch: [.5, 1, .5], energy: [.1, .3] },
 ];
 const SCENE = Object.fromEntries(SCENES.map(s => [s.id, s]));
@@ -540,7 +540,7 @@ export class Engine {
     return fz.duration;
   }
   v_cue(t, sc, e, db) {
-    const n = this.pick("cue", sc, t, ["Select_SFX", "Select"]); if (!n) return 10;
+    const n = this.pick("cue", sc, t, sc.id === "beyond" ? ["Ban", "Select_SFX"] : ["Select_SFX", "Select"]); if (!n) return 10;
     this.voice(n, t, { db, pan: this.pan(.3), lp: 6000, fadeIn: .3, fadeOut: .5, send: .85 });
     return 10;
   }
