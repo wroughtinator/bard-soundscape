@@ -8,7 +8,9 @@ import { Fluid } from "./fluid.js";
 const rnd = (a, b) => a + Math.random() * (b - a);
 const TAU = Math.PI * 2;
 const MAX_FORMS = 24;
-const DYE_GAIN = 0.42;   // overall ink strength poured into the fluid
+const DYE_GAIN = 0.2;    // overall ink strength poured into the fluid
+const FORCE = 0.3;       // push strength: gentle, so the soup drifts rather than gusts
+const SPREAD = 0.9;      // pour width
 
 const PALETTE = {
   Original: ["#f6c86a", "#fff0cf", "#7fd6c8"], Astronaut: ["#8fd8ff", "#d9c2ff", "#fff1c1"],
@@ -75,8 +77,8 @@ export class Visuals {
     if (!this.fluid) return;
     // saturate toward the colour (cream/white palettes would otherwise wash the fluid to beige)
     const m = (c[0] + c[1] + c[2]) / 3, s = 1.9, g = DYE_GAIN * k / 255;
-    this.fluid.splat(x / this.W, y / this.H, dx, dy,
-      [Math.max(0, m + (c[0] - m) * s) * g, Math.max(0, m + (c[1] - m) * s) * g, Math.max(0, m + (c[2] - m) * s) * g], r);
+    this.fluid.splat(x / this.W, y / this.H, dx * FORCE, dy * FORCE,
+      [Math.max(0, m + (c[0] - m) * s) * g, Math.max(0, m + (c[1] - m) * s) * g, Math.max(0, m + (c[2] - m) * s) * g], r * SPREAD);
   }
   burst(x, y, c, k, n = 3, force = 380, r = 1) {
     const o = rnd(0, TAU);
@@ -148,7 +150,10 @@ export class Visuals {
       this[`d_${e.type}`](c, e, age, dt);
     }
     c.globalCompositeOperation = "source-over";
-    if (this.fluid) { this.fluid.timeScale = this.slow; this.fluid.step(dtReal); }
+    if (this.fluid) {
+      try { this.fluid.timeScale = this.slow; this.fluid.step(dtReal); }
+      catch (err) { console.warn("fluid stopped:", err); this.fluid = null; }   // never let the GPU path freeze the visuals
+    }
     this.watchPerf(dtReal);
     requestAnimationFrame((t) => this.frame(t));
   }
@@ -165,13 +170,13 @@ export class Visuals {
   // organ bed: a slow current on a drifting path, coloured by the scene, swelling with the bass
   bed(dt) {
     this.bedT += dt;
-    if (this.bedT < 0.2) return; this.bedT = 0;
+    if (this.bedT < 0.09) return; this.bedT = 0;
     const t = this.time * 0.07, W = this.W, H = this.H;
     const x = W * (0.5 + 0.38 * Math.sin(t * 1.3)), y = H * (0.55 + 0.3 * Math.sin(t * 0.9 + 1.7));
-    const dx = Math.cos(t * 1.3) * 1.3 * 0.38 * W * 0.9, dy = Math.cos(t * 0.9 + 1.7) * 0.9 * 0.3 * H * 0.9;
-    const k = 0.16 + this.low * 0.3 + this.level * 0.2, col = this.tint[(this.frameN >> 5) % 3];
-    this.pour(x, y, dx * 0.6, dy * 0.6, col, k, 1.6);
-    this.pour(W - x, H - y, -dx * 0.5, -dy * 0.5, this.tint[(this.frameN >> 6) % 3], k * 0.7, 1.3);
+    const dx = Math.cos(t * 1.3) * 1.3 * 0.38 * W * 2.2, dy = Math.cos(t * 0.9 + 1.7) * 0.9 * 0.3 * H * 2.2;
+    const k = 0.17 + this.low * 0.2 + this.level * 0.12, col = this.tint[(this.frameN >> 5) % 3];
+    this.pour(x, y, dx, dy, col, k, 0.5);
+    this.pour(W - x, H - y, -dx, -dy, this.tint[((this.frameN >> 5) + 1) % 3], k * 0.8, 0.45);
   }
 
   readAudio(e, age) {

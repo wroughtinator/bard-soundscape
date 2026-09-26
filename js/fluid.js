@@ -62,6 +62,11 @@ const FS = {
       vec2 v = texture2D(uVelocity, vUv).xy + force * dt;
       v = min(max(v, -1000.0), 1000.0);
       gl_FragColor = vec4(v, 0.0, 1.0); }`,
+  viscous: `uniform sampler2D uVelocity; uniform float amount;
+    void main () {
+      vec2 C = texture2D(uVelocity, vUv).xy;
+      vec2 avg = 0.25 * (texture2D(uVelocity, vL).xy + texture2D(uVelocity, vR).xy + texture2D(uVelocity, vT).xy + texture2D(uVelocity, vB).xy);
+      gl_FragColor = vec4(mix(C, avg, amount), 0.0, 1.0); }`,
   pressure: `uniform sampler2D uPressure, uDivergence;
     void main () {
       float L = texture2D(uPressure, vL).x, R = texture2D(uPressure, vR).x, T = texture2D(uPressure, vT).x, B = texture2D(uPressure, vB).x;
@@ -72,17 +77,30 @@ const FS = {
       float L = texture2D(uPressure, vL).x, R = texture2D(uPressure, vR).x, T = texture2D(uPressure, vT).x, B = texture2D(uPressure, vB).x;
       vec2 v = texture2D(uVelocity, vUv).xy - vec2(R - L, T - B);
       gl_FragColor = vec4(v, 0.0, 1.0); }`,
-  // soft tone-mapped dye with cheap relief shading; premultiplied alpha so the art shows through
-  display: `uniform sampler2D uTexture; uniform vec2 texelSize;
+  // "heavenly soup": a luminous liquid with defined edges, glossy highlights, a pearlescent
+  // sheen that shifts with thickness, and a soft halo. Premultiplied alpha over the art.
+  display: `uniform sampler2D uTexture; uniform vec2 texelSize; uniform float time;
+    float thick (vec3 c) { return dot(c, vec3(0.35, 0.4, 0.25)); }
     void main () {
       vec3 c = texture2D(uTexture, vUv).rgb;
-      vec3 lc = texture2D(uTexture, vL).rgb, rc = texture2D(uTexture, vR).rgb, tc = texture2D(uTexture, vT).rgb, bc = texture2D(uTexture, vB).rgb;
-      float dx = length(rc) - length(lc), dy = length(tc) - length(bc);
-      vec3 n = normalize(vec3(dx, dy, length(texelSize)));
-      float diffuse = clamp(dot(n, vec3(0.0, 0.0, 1.0)) + 0.72, 0.72, 1.0);
-      c = 1.0 - exp(-c * 1.1 * diffuse);
-      float a = clamp(max(c.r, max(c.g, c.b)) * 0.9, 0.0, 0.92);
-      gl_FragColor = vec4(c, a); }`,
+      float h = thick(c);
+      vec2 o = texelSize * 2.5;
+      float hl = thick(texture2D(uTexture, vUv - vec2(o.x, 0.0)).rgb), hr = thick(texture2D(uTexture, vUv + vec2(o.x, 0.0)).rgb);
+      float ht = thick(texture2D(uTexture, vUv + vec2(0.0, o.y)).rgb), hb = thick(texture2D(uTexture, vUv - vec2(0.0, o.y)).rgb);
+      vec3 n = normalize(vec3((hl - hr) * 9.0, (hb - ht) * 9.0, 1.0));
+      vec3 l = normalize(vec3(-0.35, 0.55, 0.75));
+      float diff = clamp(dot(n, l), 0.0, 1.0);
+      float spec = pow(clamp(dot(reflect(-l, n), vec3(0.0, 0.0, 1.0)), 0.0, 1.0), 36.0);
+      float body = smoothstep(0.022, 0.11, h);                       // the liquid itself: a defined edge
+      float halo = smoothstep(0.0, 0.25, h) * 0.18;                  // soft light spilling past it
+      vec3 base = 1.0 - exp(-c * 1.35);
+      vec3 pearl = 0.5 + 0.5 * cos(6.2831 * (h * 1.3 + n.x * 0.25 - n.y * 0.15 + time * 0.02 + vec3(0.0, 0.33, 0.67)));
+      vec3 col = base * (0.72 + 0.4 * diff);
+      col += pearl * 0.14 * body;
+      col += vec3(1.0, 0.96, 0.88) * spec * 0.85 * body;
+      float a = clamp(max(body * 0.88, halo), 0.0, 0.94);
+      col *= max(body, halo * 1.6);
+      gl_FragColor = vec4(col, a); }`,
 };
 
 export class Fluid {
@@ -108,7 +126,8 @@ export class Fluid {
     // fixed quality tiers; the adaptive step only ever moves down
     this.tiers = mobile ? [[96, 384, 14], [80, 256, 10], [64, 192, 8]] : [[128, 640, 20], [112, 448, 14], [96, 320, 10]];
     this.tier = 0;
-    this.curl = 26; this.velDiss = 0.25; this.dyeDiss = 0.8; this.pressureDecay = 0.8;
+    this.curl = 10; this.velDiss = 0.9; this.dyeDiss = 0.24; this.pressureDecay = 0.8;
+    this.speed = 0.4; this.viscosity = 0.35; this.viscPasses = 2; this.clock = 0;
     this.queue = []; this.maxSplatsPerFrame = 8; this.maxQueue = 48;
     this.timeScale = 1;
 
@@ -116,7 +135,7 @@ export class Fluid {
     const prog = (name, defs = "") => this.program(vs, this.shader(gl.FRAGMENT_SHADER, defs + HEAD + FS[name]));
     this.p = {
       clear: prog("clear"), splat: prog("splat"), divergence: prog("divergence"), curl: prog("curl"),
-      vorticity: prog("vorticity"), pressure: prog("pressure"), gradient: prog("gradient"), display: prog("display"),
+      vorticity: prog("vorticity"), viscous: prog("viscous"), pressure: prog("pressure"), gradient: prog("gradient"), display: prog("display"),
       advection: prog("advection", linear ? "" : "#define MANUAL_FILTERING\n"),
     };
     const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
@@ -225,7 +244,7 @@ export class Fluid {
     this.blit(this.dye.write()); this.dye.swap();
   }
   step(dtReal) {
-    const gl = this.gl, dt = Math.min(dtReal, 1 / 30) * this.timeScale;
+    const gl = this.gl, dtR = Math.min(dtReal, 1 / 30), dt = dtR * this.timeScale * this.speed; this.clock += dtR;
     this.resize();
     gl.disable(gl.BLEND);
     for (let i = 0; i < this.maxSplatsPerFrame && this.queue.length; i++) this.applySplat(this.queue.shift());
@@ -233,6 +252,8 @@ export class Fluid {
     let u = this.use("curl"); gl.uniform2f(u.texelSize, tx, ty); gl.uniform1i(u.uVelocity, v.read().attach(0)); this.blit(this.curlT);
     u = this.use("vorticity"); gl.uniform2f(u.texelSize, tx, ty); gl.uniform1i(u.uVelocity, v.read().attach(0));
     gl.uniform1i(u.uCurl, this.curlT.attach(1)); gl.uniform1f(u.curl, this.curl); gl.uniform1f(u.dt, dt); this.blit(v.write()); v.swap();
+    u = this.use("viscous"); gl.uniform2f(u.texelSize, tx, ty); gl.uniform1f(u.amount, this.viscosity);
+    for (let i = 0; i < this.viscPasses; i++) { gl.uniform1i(u.uVelocity, v.read().attach(0)); this.blit(v.write()); v.swap(); }
     u = this.use("divergence"); gl.uniform2f(u.texelSize, tx, ty); gl.uniform1i(u.uVelocity, v.read().attach(0)); this.blit(this.div);
     u = this.use("clear"); gl.uniform1i(u.uTexture, this.pres.read().attach(0)); gl.uniform1f(u.value, this.pressureDecay); this.blit(this.pres.write()); this.pres.swap();
     u = this.use("pressure"); gl.uniform2f(u.texelSize, tx, ty); gl.uniform1i(u.uDivergence, this.div.attach(0));
@@ -245,10 +266,10 @@ export class Fluid {
     gl.uniform1f(u.dt, dt); gl.uniform1f(u.dissipation, this.velDiss); this.blit(v.write()); v.swap();
     if (!this.linear) gl.uniform2f(u.dyeTexelSize, this.dye.read().tx, this.dye.read().ty);
     gl.uniform1i(u.uVelocity, v.read().attach(0)); gl.uniform1i(u.uSource, this.dye.read().attach(1));
-    gl.uniform1f(u.dissipation, this.dyeDiss); this.blit(this.dye.write()); this.dye.swap();
+    gl.uniform1f(u.dissipation, this.dyeDiss * dtR / Math.max(dt, 1e-4)); this.blit(this.dye.write()); this.dye.swap();
     // draw
     u = this.use("display"); gl.uniform2f(u.texelSize, this.dye.read().tx, this.dye.read().ty);
-    gl.uniform1i(u.uTexture, this.dye.read().attach(0));
+    gl.uniform1i(u.uTexture, this.dye.read().attach(0)); gl.uniform1f(u.time, this.clock);
     gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     gl.clearColor(0, 0, 0, 0); gl.bindFramebuffer(gl.FRAMEBUFFER, null); gl.clear(gl.COLOR_BUFFER_BIT);
     this.blit(null);
